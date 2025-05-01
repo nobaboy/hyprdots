@@ -1,0 +1,73 @@
+{
+    "clock": {
+        "format": " {0:%T} 󰃭 {0:%a, %d}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "interval": 1,
+        "calendar": {
+            "mode-mon-col": 3,
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#d7d7d7'><b>{}</b></span>",
+                "weekdays": "<span color='#339aff'><b>{}</b></span>",
+                "days": "<span color='#d7d7d7'><b>{}</b></span>",
+                "today": "<span color='#007aff'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+
+    "cpu": {
+        "format": "󰍛 {usage}%",
+        "tooltip": false,
+        "interval": 10
+    },
+
+    "memory": {
+        "format": " {percentage}%",
+        "tooltip-format": " RAM: {used:0.1f} GB / {total:0.1f} GB\n Swap: {swapUsed:0.1f} GB / {swapTotal:0.1f} GB",
+        "max-length": 10,
+        "interval": 30
+    },
+
+    "network": {
+        "format-wifi": " <span foreground='#66ccff'> {bandwidthDownBytes}</span> | <span foreground='#66aaff'> {bandwidthUpBytes}</span>",
+        "format-ethernet": "󰈀 <span foreground='#66ccff'> {bandwidthDownBytes}</span> | <span foreground='#66aaff'> {bandwidthUpBytes}</span>",
+        "tooltip": false,
+        "interval": 2
+    },
+
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "~/.config/hypr/scripts/wlogout.sh"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "{icon} ",
+        "tooltip-format": "{desc}",
+        "on-click": "pavucontrol",
+        "scroll-step": 5,
+        "format-icons": {
+            "default": ["", "", ""]
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{initialTitle}",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "all-outputs": true,
+        "format": "{}",
+        "persistent-workspaces": {
+            "*": 5
+        }
+    }
+}

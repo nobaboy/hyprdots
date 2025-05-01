@@ -1,0 +1,125 @@
+@import "theme.css";
+
+* {
+    min-height: 32px;
+    min-width: 32px;
+    padding: 0px;
+
+    border: none;
+    border-radius: 4px;
+
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 16px;
+}
+
+window#waybar {
+    background: @bar-bg;
+}
+
+tooltip {
+    padding: 20px;
+    border: 2px solid @border-main;
+    background: @main-bg;
+}
+
+#clock {
+    padding: 0px 12px;
+    border: 2px solid @border-main;
+    color: @main-fg;
+    background: @main-bg;
+}
+
+#cpu {
+    padding: 0px 12px;
+    margin-left: 8px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+}
+
+#memory {
+    padding: 0px 12px;
+    margin-left: 8px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+}
+
+#custom-power {
+    padding-left: 0px;
+    padding-right: 4px;
+    margin-left: 8px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+
+    transition: all 0.1s ease-in-out;
+}
+
+#custom-power:hover {
+    border: 2px solid @main-fg;
+}
+
+#pulseaudio {
+    padding: 0px 12px;
+    margin-left: 8px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+
+    transition: all 0.1s ease-in-out;
+}
+
+#pulseaudio:hover {
+    border: 2px solid @main-fg;
+}
+
+#window {
+    padding: 0px 12px;
+    margin-right: 8px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+}
+
+window#waybar.empty #window {
+    border: transparent;
+    background: transparent;
+}
+
+#workspaces button {
+    margin-right: 8px;
+
+    border: 2px solid @border-main;
+
+    box-shadow: none;
+    text-shadow: none;
+
+    color: @main-fg;
+    background: @main-bg;
+
+    transition: all 0.1s ease-in-out;
+}
+
+#workspaces button:hover {
+    border: 2px solid @main-fg;
+}
+
+#workspaces button.urgent {
+    border: 2px solid @main-fg;
+    animation: blink 1s infinite;
+}
+
+#workspaces button.active {
+    border: 2px solid @accent-active;
+}
