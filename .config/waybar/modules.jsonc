@@ -1,4 +1,19 @@
 {
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "tooltip-format": "{timeTo}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        "format-no-controller": ""
+    },
+
     "clock": {
         "format": " {0:%T} 󰃭 {0:%a, %d}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -23,27 +38,29 @@
     "cpu": {
         "format": "󰍛 {usage}%",
         "tooltip": false,
-        "interval": 10
+        "on-click": "~/.config/waybar/scripts/system-monitor.sh"
     },
 
     "memory": {
         "format": " {percentage}%",
         "tooltip-format": " RAM: {used:0.1f} GB / {total:0.1f} GB\n Swap: {swapUsed:0.1f} GB / {swapTotal:0.1f} GB",
-        "max-length": 10,
-        "interval": 30
+        "on-click": "~/.config/waybar/scripts/system-monitor.sh"
     },
 
     "network": {
-        "format-wifi": " <span foreground='#66ccff'> {bandwidthDownBytes}</span> | <span foreground='#66aaff'> {bandwidthUpBytes}</span>",
-        "format-ethernet": "󰈀 <span foreground='#66ccff'> {bandwidthDownBytes}</span> | <span foreground='#66aaff'> {bandwidthUpBytes}</span>",
-        "tooltip": false,
+        "format": "{ifname}",
+        "format-wifi": "  ({signalStrength}%)",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "Connected to {essid}\n {bandwidthDownBytes} |  {bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
         "interval": 2
     },
 
     "custom/power": {
         "format": "",
         "tooltip": false,
-        "on-click": "~/.config/hypr/scripts/wlogout.sh"
+        "on-click": "wlogout"
     },
 
     "pulseaudio": {
@@ -52,20 +69,13 @@
         "tooltip-format": "{desc}",
         "on-click": "pavucontrol",
         "scroll-step": 5,
-        "format-icons": {
-            "default": ["", "", ""]
-        }
-    },
-
-    "hyprland/window": {
-        "format": "{initialTitle}",
-        "tooltip": false
+        "format-icons": ["", "", ""]
     },
 
     "hyprland/workspaces": {
-        "on-click": "activate",
-        "all-outputs": true,
         "format": "{}",
+        "all-outputs": true,
+        "on-click": "activate",
         "persistent-workspaces": {
             "*": 5
         }

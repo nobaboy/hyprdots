@@ -1,0 +1,1 @@
+kitty --class system-monitor -e htop

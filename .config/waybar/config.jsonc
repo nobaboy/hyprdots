@@ -4,11 +4,9 @@
     "mod": "dock",
 
     "height": 28,
-
     "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
-    "margin-bottom": 0,
+    "margin-left": 4,
+    "margin-right": 4,
 
     "include": [
         "~/.config/waybar/modules.jsonc"
@@ -16,7 +14,6 @@
 
     "modules-left": [
         "hyprland/workspaces"
-        // "hyprland/window"
     ],
 
     "modules-center": [
@@ -27,6 +24,8 @@
         "cpu",
         "memory",
         "pulseaudio",
+        "bluetooth",
+        "network",
         "custom/power"
     ]
 }

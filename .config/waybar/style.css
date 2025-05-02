@@ -22,6 +22,28 @@ tooltip {
     background: @main-bg;
 }
 
+#battery {
+    padding: 0px 12px;
+    margin: 0px 4px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+}
+
+#bluetooth {
+    padding: 0px 12px;
+    margin: 0px 4px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+
+    transition: all 0.1s ease-in-out;
+}
+
 #clock {
     padding: 0px 12px;
     border: 2px solid @border-main;
@@ -31,7 +53,7 @@ tooltip {
 
 #cpu {
     padding: 0px 12px;
-    margin-left: 8px;
+    margin: 0px 4px;
 
     border: 2px solid @border-main;
 
@@ -41,18 +63,30 @@ tooltip {
 
 #memory {
     padding: 0px 12px;
-    margin-left: 8px;
+    margin: 0px 4px;
 
     border: 2px solid @border-main;
 
     color: @main-fg;
     background: @main-bg;
+}
+
+#network {
+    padding: 0px 12px;
+    margin: 0px 4px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+
+    transition: all 0.1s ease-in-out;
 }
 
 #custom-power {
     padding-left: 0px;
     padding-right: 4px;
-    margin-left: 8px;
+    margin: 0px 4px;
 
     border: 2px solid @border-main;
 
@@ -60,15 +94,11 @@ tooltip {
     background: @main-bg;
 
     transition: all 0.1s ease-in-out;
-}
-
-#custom-power:hover {
-    border: 2px solid @main-fg;
 }
 
 #pulseaudio {
     padding: 0px 12px;
-    margin-left: 8px;
+    margin: 0px 4px;
 
     border: 2px solid @border-main;
 
@@ -78,27 +108,18 @@ tooltip {
     transition: all 0.1s ease-in-out;
 }
 
+#bluetooth:hover,
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#custom-power:hover,
 #pulseaudio:hover {
     border: 2px solid @main-fg;
 }
 
-#window {
-    padding: 0px 12px;
-    margin-right: 8px;
-
-    border: 2px solid @border-main;
-
-    color: @main-fg;
-    background: @main-bg;
-}
-
-window#waybar.empty #window {
-    border: transparent;
-    background: transparent;
-}
 
 #workspaces button {
-    margin-right: 8px;
+    margin: 0px 4px;
 
     border: 2px solid @border-main;
 
