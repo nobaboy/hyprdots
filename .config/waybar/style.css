@@ -83,6 +83,11 @@ tooltip {
     transition: all 0.1s ease-in-out;
 }
 
+#network.ethernet {
+    padding-left: 0px;
+    padding-right: 4px;
+}
+
 #custom-power {
     padding-left: 0px;
     padding-right: 4px;
