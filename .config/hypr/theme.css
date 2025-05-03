@@ -1,12 +1,9 @@
-@define-color bar-bg rgba(0, 0, 0, 0);
-
 @define-color main-bg #1e1e1e;
 @define-color main-fg #d7d7d7;
 
 @define-color border-main #6a6a6a;
 
 @define-color accent-active #007aff;
-/* @define-color accent-hover #339aff; */
 
 @keyframes blink {
     0% {

@@ -1,0 +1,20 @@
+[global]
+timeout = 3
+padding = 8
+gap_size = 4
+idle_threshold = 120
+
+origin = bottom-right
+width = 300
+height = 300
+offset = (18, 18)
+
+corner_radius = 4
+frame_width = 2
+background = "#1e1e1e"
+frame_color = "#6a6a6a"
+font = JetBrainsMono Nerd Font
+
+indicate_hidden = yes
+
+mouse_middle_click = close_all

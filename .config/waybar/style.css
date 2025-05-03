@@ -1,4 +1,4 @@
-@import "theme.css";
+@import "../hypr/theme.css";
 
 * {
     min-height: 32px;
@@ -13,73 +13,26 @@
 }
 
 window#waybar {
-    background: @bar-bg;
+    background: transparent;
 }
 
 tooltip {
-    padding: 20px;
     border: 2px solid @border-main;
     background: @main-bg;
 }
 
-#battery {
-    padding: 0px 12px;
-    margin: 0px 4px;
-
-    border: 2px solid @border-main;
-
-    color: @main-fg;
-    background: @main-bg;
-}
-
-#bluetooth {
-    padding: 0px 12px;
-    margin: 0px 4px;
-
-    border: 2px solid @border-main;
-
-    color: @main-fg;
-    background: @main-bg;
-
-    transition: all 0.1s ease-in-out;
-}
-
-#clock {
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#custom-power {
     padding: 0px 12px;
     border: 2px solid @border-main;
     color: @main-fg;
     background: @main-bg;
-}
-
-#cpu {
-    padding: 0px 12px;
-    margin: 0px 4px;
-
-    border: 2px solid @border-main;
-
-    color: @main-fg;
-    background: @main-bg;
-}
-
-#memory {
-    padding: 0px 12px;
-    margin: 0px 4px;
-
-    border: 2px solid @border-main;
-
-    color: @main-fg;
-    background: @main-bg;
-}
-
-#network {
-    padding: 0px 12px;
-    margin: 0px 4px;
-
-    border: 2px solid @border-main;
-
-    color: @main-fg;
-    background: @main-bg;
-
     transition: all 0.1s ease-in-out;
 }
 
@@ -91,19 +44,6 @@ tooltip {
 #custom-power {
     padding-left: 0px;
     padding-right: 4px;
-    margin: 0px 4px;
-
-    border: 2px solid @border-main;
-
-    color: @main-fg;
-    background: @main-bg;
-
-    transition: all 0.1s ease-in-out;
-}
-
-#pulseaudio {
-    padding: 0px 12px;
-    margin: 0px 4px;
 
     border: 2px solid @border-main;
 
@@ -122,9 +62,9 @@ tooltip {
     border: 2px solid @main-fg;
 }
 
-
 #workspaces button {
-    margin: 0px 4px;
+    margin-left: 4px;
+    margin-right: 4px;
 
     border: 2px solid @border-main;
 
@@ -135,6 +75,14 @@ tooltip {
     background: @main-bg;
 
     transition: all 0.1s ease-in-out;
+}
+
+#workspaces button:first-child {
+    margin-left: 0px;
+}
+
+#workspaces button:last-child {
+    margin-right: 0px;
 }
 
 #workspaces button:hover {
