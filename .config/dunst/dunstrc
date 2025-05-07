@@ -11,8 +11,8 @@ offset = (18, 18)
 
 corner_radius = 4
 frame_width = 2
-background = "#1e1e1e"
-frame_color = "#6a6a6a"
+background = "#1e1e2e"
+frame_color = "#3b4252"
 font = JetBrainsMono Nerd Font
 
 indicate_hidden = yes

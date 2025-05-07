@@ -22,7 +22,7 @@
     ],
     
     "modules-right": [
-        "cpu",
+        "custom/updates",
         "memory",
         "pulseaudio",
         "bluetooth",

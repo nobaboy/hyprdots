@@ -1,6 +1,6 @@
 {
     "battery": {
-        "format": "{icon} {capacity}%",
+        "format": "{capacity}% {icon}",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "tooltip-format": "{timeTo}",
@@ -49,13 +49,11 @@
 
     "network": {
         "format": "{ifname}",
-        "format-wifi": "  ({signalStrength}%)",
+        "format-wifi": " ",
         "format-ethernet": "󰈀",
-        "format-disconnected": "󰖪",
-        "tooltip-format": "Connected to {essid}\n {bandwidthDownBytes} |  {bandwidthUpBytes}",
-        "tooltip-format-disconnected": "Disconnected",
-        // "on-click": "~/.config/waybar/scripts/networkmanager.sh",
-        // "on-click-right": "~/.config/waybar/scripts/nm-applet.sh toggle",
+        "tooltip-format-ethernet": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
+        "tooltip-format-wifi": "Connected to {essid}\n {bandwidthDownBytes} |  {bandwidthUpBytes}",
+        "on-click": "~/.config/waybar/scripts/network-manager.sh toggle",
         "interval": 2
     },
 
@@ -66,18 +64,27 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-muted": "{icon} ",
+        "format": "{volume}% {icon}",
+        "format-muted": "",
         "tooltip-format": "{desc}",
         "on-click": "pavucontrol",
         "scroll-step": 5,
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", " "]
+    },
+
+    "custom/updates": {
+        "format": "{}  ",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/updates.sh",
+        "on-click": "~/.config/waybar/scripts/check-updates.sh",
+        "interval": 1800,
+        "tooltip": false,
+        "hide-empty-text": true
     },
 
     "hyprland/workspaces": {
         "format": "{}",
         "on-click": "activate",
-        "all-outputs": true,
         "persistent-workspaces": {
             "*": 5
         }

@@ -8,17 +8,20 @@
     border: none;
     border-radius: 4px;
 
-    font-family: "JetBrainsMono Nerd Font";
-    font-size: 16px;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
 }
 
-window#waybar {
+#waybar {
     background: transparent;
 }
 
 tooltip {
     border: 2px solid @border-main;
     background: @main-bg;
+
+    font-family: "Noto Sans";
+    font-size: 16px;
 }
 
 #battery,
@@ -27,8 +30,9 @@ tooltip {
 #cpu,
 #memory,
 #network,
+#custom-power,
 #pulseaudio,
-#custom-power {
+#custom-updates {
     padding: 0px 12px;
     border: 2px solid @border-main;
     color: @main-fg;
@@ -58,7 +62,8 @@ tooltip {
 #memory:hover,
 #network:hover,
 #custom-power:hover,
-#pulseaudio:hover {
+#pulseaudio:hover,
+#custom-updates:hover {
     border: 2px solid @main-fg;
 }
 
