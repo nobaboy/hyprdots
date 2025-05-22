@@ -30,7 +30,6 @@ tooltip {
 #cpu,
 #memory,
 #network,
-#custom-power,
 #pulseaudio,
 #custom-updates {
     padding: 0px 12px;
@@ -55,6 +54,22 @@ tooltip {
     background: @main-bg;
 
     transition: all 0.1s ease-in-out;
+}
+
+#tray {
+    padding: 0px 4px;
+
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
+}
+
+#tray menu {
+    border: 2px solid @border-main;
+
+    color: @main-fg;
+    background: @main-bg;
 }
 
 #bluetooth:hover,

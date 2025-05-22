@@ -53,7 +53,7 @@
         "format-ethernet": "󰈀",
         "tooltip-format-ethernet": " {bandwidthDownBytes} |  {bandwidthUpBytes}",
         "tooltip-format-wifi": "Connected to {essid}\n {bandwidthDownBytes} |  {bandwidthUpBytes}",
-        "on-click": "~/.config/waybar/scripts/network-manager.sh toggle",
+        "on-click": "~/.config/waybar/scripts/network/network-manager.sh toggle",
         "interval": 2
     },
 
@@ -72,12 +72,17 @@
         "format-icons": ["", "", " "]
     },
 
+    "tray": {
+        "reverse-direction": true,
+        "icon-size": 18
+    },
+
     "custom/updates": {
         "format": "{}  ",
         "return-type": "json",
-        "exec": "~/.config/waybar/scripts/updates.sh",
-        "on-click": "~/.config/waybar/scripts/check-updates.sh",
-        "interval": 1800,
+        "exec": "~/.config/waybar/scripts/updates/check-updates.sh",
+        "on-click": "~/.config/waybar/scripts/updates/run-updates.sh",
+        "interval": 3600,
         "tooltip": false,
         "hide-empty-text": true
     },

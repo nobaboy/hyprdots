@@ -23,7 +23,7 @@
     
     "modules-right": [
         "custom/updates",
-        "memory",
+        "tray",
         "pulseaudio",
         "bluetooth",
         "network",

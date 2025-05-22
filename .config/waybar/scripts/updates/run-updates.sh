@@ -1,0 +1,1 @@
+kitty --class floating-kitty -e ~/.config/waybar/scripts/updates/install-updates.sh
