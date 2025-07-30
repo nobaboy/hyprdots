@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Prompt the user for update confirmation
-read -rp "Updates are available. Do you want to install them now? [Y\n] " confirm
+read -rp "Updates are available. Do you want to install them now? [Y/n] " confirm
 confirm="${confirm,,}" # Convert to lowercase
 
 if [[ "$confirm" != "n" ]]; then
