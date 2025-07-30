@@ -1,18 +1,19 @@
-@define-color main-bg #1e1e2e;
-@define-color main-fg #f8f8f2;
+@define-color bg #1e1e2e;
+@define-color fg #f8f8f2;
 
-@define-color border-main #3b4252;
+@define-color border #2d3748;
+@define-color border-hover #6680a8;
 
-@define-color accent-active #007aff;
+@define-color accent #007aff;
 
 @keyframes blink {
     0% {
-        border: 2px solid @border-main;
+        border: 1px solid @border;
     }
     50% {
-        border: 2px solid @main-fg;
+        border: 1px solid @fg;
     }
     100% {
-        border: 2px solid @border-main;
+        border: 1px solid @border;
     }
 }

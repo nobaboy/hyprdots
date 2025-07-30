@@ -12,10 +12,10 @@ window {
 
 button {
     margin: 16px;
-    border: 2px solid @border-main;
+    border: 1px solid @border;
 
-    color: @main-fg;
-    background: @main-bg;
+    color: @fg;
+    background: @bg;
 
     transition: all 0.1s ease-in-out;
 
@@ -25,11 +25,11 @@ button {
 }
 
 button:hover {
-    border: 2px solid @main-fg;
+    border: 1px solid @border-hover;
 }
 
 button:active {
-    border: 2px solid @accent-active;
+    border: 1px solid @accent;
 }
 
 #lock {

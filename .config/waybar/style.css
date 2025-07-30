@@ -6,7 +6,7 @@
     padding: 0px;
 
     border: none;
-    border-radius: 4px;
+    border-radius: 12px;
 
     font-family: "JetBrainsMono Nerd Font", sans-serif;
     font-size: 14px;
@@ -17,8 +17,8 @@
 }
 
 tooltip {
-    border: 2px solid @border-main;
-    background: @main-bg;
+    border: 1px solid @border;
+    background: @bg;
 
     font-family: "Noto Sans";
     font-size: 16px;
@@ -33,9 +33,9 @@ tooltip {
 #pulseaudio,
 #custom-updates {
     padding: 0px 12px;
-    border: 2px solid @border-main;
-    color: @main-fg;
-    background: @main-bg;
+    border: 1px solid @border;
+    color: @fg;
+    background: @bg;
     transition: all 0.1s ease-in-out;
 }
 
@@ -48,10 +48,10 @@ tooltip {
     padding-left: 0px;
     padding-right: 4px;
 
-    border: 2px solid @border-main;
+    border: 1px solid @border;
 
-    color: @main-fg;
-    background: @main-bg;
+    color: @fg;
+    background: @bg;
 
     transition: all 0.1s ease-in-out;
 }
@@ -59,40 +59,41 @@ tooltip {
 #tray {
     padding: 0px 4px;
 
-    border: 2px solid @border-main;
+    border: 1px solid @border;
 
-    color: @main-fg;
-    background: @main-bg;
+    color: @fg;
+    background: @bg;
 }
 
 #tray menu {
-    border: 2px solid @border-main;
+    border: 1px solid @border;
 
-    color: @main-fg;
-    background: @main-bg;
+    color: @fg;
+    background: @bg;
 }
 
 #bluetooth:hover,
+#clock:hover,
 #cpu:hover,
 #memory:hover,
 #network:hover,
 #custom-power:hover,
 #pulseaudio:hover,
 #custom-updates:hover {
-    border: 2px solid @main-fg;
+    border: 1px solid @border-hover;
 }
 
 #workspaces button {
     margin-left: 4px;
     margin-right: 4px;
 
-    border: 2px solid @border-main;
+    border: 1px solid @border;
 
     box-shadow: none;
     text-shadow: none;
 
-    color: @main-fg;
-    background: @main-bg;
+    color: @fg;
+    background: @bg;
 
     transition: all 0.1s ease-in-out;
 }
@@ -106,14 +107,15 @@ tooltip {
 }
 
 #workspaces button:hover {
-    border: 2px solid @main-fg;
+    border: 1px solid @border-hover;
 }
 
 #workspaces button.urgent {
-    border: 2px solid @main-fg;
+    border: 1px solid @fg;
     animation: blink 1s infinite;
 }
 
 #workspaces button.active {
-    border: 2px solid @accent-active;
+    border: 1px solid @accent;
+    background: #0e2650;
 }

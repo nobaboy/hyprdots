@@ -15,7 +15,7 @@
     },
 
     "clock": {
-        "format": " {0:%T} 󰃭 {0:%a, %d}",
+        "format": "{0:%T} | {0:%A, %d %B %Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "interval": 1,
         "calendar": {
@@ -65,11 +65,11 @@
 
     "pulseaudio": {
         "format": "{volume}% {icon}",
-        "format-muted": "",
+        "format-muted": " ",
         "tooltip-format": "{desc}",
         "on-click": "pavucontrol",
         "scroll-step": 5,
-        "format-icons": ["", "", " "]
+        "format-icons": ["", " ", " "]
     },
 
     "tray": {
