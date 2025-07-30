@@ -9,10 +9,10 @@ width = 300
 height = 300
 offset = (18, 18)
 
-corner_radius = 4
-frame_width = 2
+corner_radius = 12
+frame_width = 1
 background = "#1e1e2e"
-frame_color = "#3b4252"
+frame_color = "#2d3748"
 font = JetBrainsMono Nerd Font
 
 indicate_hidden = yes
